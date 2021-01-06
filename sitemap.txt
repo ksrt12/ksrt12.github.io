@@ -4,4 +4,5 @@ https://snegiry.art/isu/
 https://snegiry.art/isu/json2xls.html
 https://snegiry.art/matlab/
 https://snegiry.art/nsk.html
+https://snegiry.art/perm.html
 https://snegiry.art/tools/
