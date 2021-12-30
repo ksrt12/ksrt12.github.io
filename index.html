@@ -13,12 +13,25 @@
             padding: 0;
             font-family: sans-serif;
         }
-        
+
         .license-text {
             background-color: #eeeeee;
             border-top: 20px solid white;
             padding: 10px;
         }
+
+        a {
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #048899;
+        }
+
+        /* body>ymaps.ymaps-2-1-79-map {
+            display: none !important;
+        } */
     </style>
     <link rel="apple-touch-icon" sizes="120x120" href="../icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon-16x16.png">
@@ -27,13 +40,14 @@
     <link rel="icon" type="image/png" sizes="128x128" href="../icons/favicon-128x128.png">
     <link rel="mask-icon" href="../icons/safari-pinned-tab.svg" color="#5bbad5">
     <title>SPB METRO</title>
+    <script src="main.js"></script>
 </head>
 
 <body>
-    <p class="license-text">
-        METRO MAP by <a href="https://vk.com/kazakovstepan">kazakovstepan</a> | <a href="nsk.html" id="nsk">Новосибирск></a> | <a href="perm.html" id="perm">Пермь></a>
+    <p id="license" class="license-text">
+        <script>loadCities();</script>
+        METRO MAPS by <a href="https://vk.com/kazakovstepan">kazakovstepan</a>
     </p>
-    <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aeaac18d2eb61ec31da1d6d3893afed67260b0ff41e35b2bca606498690add6cf&amp;width=100%25&amp;height=830&amp;lang=ru_RU&amp;scroll=true"></script>
 </body>
 
 </html>

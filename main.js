@@ -1,0 +1,57 @@
+const cities = [
+    {
+        id: "spb",
+        name: "Санкт-Петербург",
+        hash: "3Aeaac18d2eb61ec31da1d6d3893afed67260b0ff41e35b2bca606498690add6cf"
+    },
+    {
+        id: "nsk",
+        name: "Новосибирск",
+        hash: "3Ac97db91a8106980e1de5987fa6b8fa3afb55be118eaa1c52347262422e06e405"
+    },
+    {
+        id: "perm",
+        name: "Пермь",
+        hash: "3A9b422f3cd97d04a210cd3f7cbba01d83f4965f638974e6d9b298ad08e0fe0466"
+    },
+    {
+        id: "ufa",
+        name: "Уфа",
+        hash: "3A8ebb059f1f3456695d34b1ffa6a4111af0ee0340a68f30dfe04ea9abab1597b4"
+    },
+    {
+        id: "chl",
+        name: "Челябинск",
+        hash: "3A75c0666f0ed0c532b2c03c2015cf58a64d8f683e727a2bd1bbc7a5de72a4d836"
+    }
+];
+
+function loadMap(hash) {
+    let s = document.createElement("script");
+    s.async = true;
+    s.src = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%" + hash + "&amp;width=100%25&amp;height=830&amp;lang=ru_RU&amp;scroll=true";
+    document.body.appendChild(s);
+}
+
+function loadCities() {
+    const toAdd = document.getElementById("license");
+    const isLoadAll = [];
+    cities.forEach((city, n) => {
+        let a = document.createElement("a");
+        a.id = city.id;
+        a.text = city.name + " | ";
+        // a.href = "#";
+        a.onclick = () => changeCity(city, n);
+        toAdd.appendChild(a);
+        loadMap(city.hash);
+    });
+    setTimeout(() => changeCity(cities[0], 0), 1000);
+}
+
+function changeCity(city, n) {
+    document.title = city.name;
+    cities.forEach((curr_city, i) => {
+        document.getElementById(curr_city.id).style.color = (curr_city.id === city.id) ? "#048899" : "black";
+        document.querySelectorAll("body > ymaps")[i].style.setProperty('display', (i === n) ? 'block' : 'none', 'important');
+    });
+}
