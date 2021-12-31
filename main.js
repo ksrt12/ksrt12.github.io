@@ -41,14 +41,15 @@ function loadCities() {
         a.id = city.id;
         a.text = city.name + " | ";
         // a.href = "#";
-        a.onclick = () => changeCity(city, n);
+        a.onclick = () => changeCity(n);
         toAdd.appendChild(a);
         loadMap(city.hash);
     });
-    setTimeout(() => changeCity(cities[0], 0), 1000);
+    setTimeout(() => changeCity(0), 1000);
 }
 
-function changeCity(city, n) {
+function changeCity(n) {
+    const city = cities[n];
     document.title = city.name;
     cities.forEach((curr_city, i) => {
         document.getElementById(curr_city.id).style.color = (curr_city.id === city.id) ? "#048899" : "black";
