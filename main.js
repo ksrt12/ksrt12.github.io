@@ -15,6 +15,11 @@ const cities = [
         hash: "3A9b422f3cd97d04a210cd3f7cbba01d83f4965f638974e6d9b298ad08e0fe0466"
     },
     {
+        id: "ekb",
+        name: "Екатеринбург",
+        hash: "3A6ecc7933f9ce3b12cb4a00ead6f4274ff7775af68b8ffef060f54f224c73b647"
+    },
+    {
         id: "ufa",
         name: "Уфа",
         hash: "3A8ebb059f1f3456695d34b1ffa6a4111af0ee0340a68f30dfe04ea9abab1597b4"
