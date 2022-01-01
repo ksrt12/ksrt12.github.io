@@ -28,6 +28,11 @@ const cities = [
         id: "chl",
         name: "Челябинск",
         hash: "3A75c0666f0ed0c532b2c03c2015cf58a64d8f683e727a2bd1bbc7a5de72a4d836"
+    },
+    {
+        id: "tomsk",
+        name: "Томск",
+        hash: "3A6d60ef3586376839403ee03a339e3c80d135f3019a4331b13b3358075bb47c3a"
     }
 ];
 
