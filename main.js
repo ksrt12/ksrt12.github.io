@@ -33,6 +33,11 @@ const cities = [
         id: "tomsk",
         name: "Томск",
         hash: "3A6d60ef3586376839403ee03a339e3c80d135f3019a4331b13b3358075bb47c3a"
+    },
+    {
+        id: "omsk",
+        name: "Омск",
+        hash: "3A5036f854227785ab9db4505a58d6bfeb39b969178c40a643bc9699b72a937542"
     }
 ];
 
@@ -45,7 +50,6 @@ function loadMap(hash) {
 
 function loadCities() {
     const toAdd = document.getElementById("license");
-    const isLoadAll = [];
     cities.forEach((city, n) => {
         let a = document.createElement("a");
         a.id = city.id;
