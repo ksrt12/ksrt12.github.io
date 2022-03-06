@@ -38,6 +38,16 @@ const cities = [
         id: "omsk",
         name: "Омск",
         hash: "3A5036f854227785ab9db4505a58d6bfeb39b969178c40a643bc9699b72a937542"
+    },
+    {
+        id: "rostov",
+        name: "Ростов-на-Дону",
+        hash: "3A451258d278c5b02779a26383f899ac53e03c75a5c7e828a8a9386dea75dbf566"
+    },
+    {
+        id: "nnovgorog",
+        name: "Нижний Новгород",
+        hash: "3Ac150ca495511f6be8c05b316b08a90bc0c96610df77985d753205d12da88f7e7"
     }
 ];
 
