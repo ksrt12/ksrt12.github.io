@@ -48,6 +48,11 @@ const cities = [
         id: "nnovgorog",
         name: "Нижний Новгород",
         hash: "3Ac150ca495511f6be8c05b316b08a90bc0c96610df77985d753205d12da88f7e7"
+    },
+    {
+        id: "karsnodar",
+        name: "Краснодар",
+        hash: "3Ae4f293f77a38338162c4fa50fc18c752d8c2b76c4b7fb4555ddee859ab29e386"
     }
 ];
 
