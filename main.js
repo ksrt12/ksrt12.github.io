@@ -53,6 +53,11 @@ const cities = [
         id: "karsnodar",
         name: "Краснодар",
         hash: "3Ae4f293f77a38338162c4fa50fc18c752d8c2b76c4b7fb4555ddee859ab29e386"
+    },
+    {
+        id: "kazan",
+        name: "Казань",
+        hash: "3A61707eb1e084ed1fdb2119e5254885f4dccd88271460c56a4446dafe9abbe8e9"
     }
 ];
 
