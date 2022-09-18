@@ -61,32 +61,27 @@ const cities = [
     }
 ];
 
-function loadMap(hash) {
-    let s = document.createElement("script");
-    s.async = true;
-    s.src = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%" + hash + "&amp;width=100%25&amp;height=830&amp;lang=ru_RU&amp;scroll=true";
-    document.body.appendChild(s);
+function loadMap(hash, id) {
+    let frame = document.createElement("iframe");
+    frame.src = "https://yandex.ru/map-widget/v1/?um=constructor%" + hash;
+    frame.id = id;
+    document.body.appendChild(frame);
 }
 
 function loadCities() {
     const toAdd = document.getElementById("license");
-    cities.forEach((city, n) => {
+    cities.forEach(({ id, name, hash }) => {
         let a = document.createElement("a");
-        a.id = city.id;
-        a.text = city.name + " | ";
-        // a.href = "#";
-        a.onclick = () => changeCity(n);
+        a.id = "a" + id;
+        a.text = name + " | ";
+        a.onclick = () => changeCity(id);
         toAdd.appendChild(a);
-        loadMap(city.hash);
+        loadMap(hash, id);
     });
-    setTimeout(() => changeCity(0), 1000);
+    setTimeout(() => changeCity("spb"), 1000);
 }
 
-function changeCity(n) {
-    const city = cities[n];
-    document.title = city.name;
-    cities.forEach((curr_city, i) => {
-        document.getElementById(curr_city.id).style.color = (curr_city.id === city.id) ? "#048899" : "black";
-        document.querySelectorAll("body > ymaps")[i].style.setProperty('display', (i === n) ? 'block' : 'none', 'important');
-    });
+function changeCity(currId) {
+    document.title = cities.find(c => c.id === currId).name;
+    cities.forEach(({ id }) => ["a" + id, id].forEach(uid => document.getElementById(uid).classList[(id === currId) ? "add" : "remove"]("active")));
 }

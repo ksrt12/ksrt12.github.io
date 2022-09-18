@@ -20,18 +20,30 @@
             padding: 10px;
         }
 
-        a {
+        .license-text>a {
             cursor: pointer;
             text-decoration: none;
+            color: black;
         }
 
-        a:hover {
+        .license-text>a.active {
             color: #048899;
         }
 
-        /* body>ymaps.ymaps-2-1-79-map {
-            display: none !important;
-        } */
+        .license-text>a:hover {
+            color: #048899;
+        }
+
+        iframe {
+            width: 100%;
+            height: calc(100vh - 108px);
+            border-width: 0;
+            display: none;
+        }
+
+        iframe.active {
+            display: block;
+        }
     </style>
     <link rel="apple-touch-icon" sizes="120x120" href="../icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon-16x16.png">
